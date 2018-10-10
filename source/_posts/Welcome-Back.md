@@ -85,6 +85,12 @@ snapshot the changes
 
 `git commit -m "write new post"`
 
+### Preview
+to see the just-finised post we can do it with
+
+`hexo server`
+
+to launch local server serving the blog locally
 
 
 ## 3. Publish
