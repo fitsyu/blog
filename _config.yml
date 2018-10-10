@@ -80,5 +80,5 @@ theme: landscape
 deploy:
   type: git
   repository: https://github.com/fitsyu/blog.git
-  branch: published
-  message: 
+  branch: master
+  message:
