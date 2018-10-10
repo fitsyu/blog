@@ -58,19 +58,27 @@ there are two branches:
 	
 
 ## 2. Writing a Post
+
+### Prepare the post
 first, get into blog directory.
 
 then execute `hexo new post <PostTitle>`
 
 it should generate empty post file in source/_post
 
+### Write
 then edit the file to start writing by a command like this 
 
 `macdown source/_post/PostTitle.md`
 
+### After Writing
+when writing is done do this
+
+`hexo generate`
+
 
 ## 3. Publish
-after writing a post if we want it seen by public
+after writing a post if we want it be seen by public
 
 we can publish it this way
 
