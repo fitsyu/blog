@@ -30,7 +30,7 @@ Pertama yang dibutuhkan adalah dua buah property pada objek yang berperan sebaga
 Dua property tersebut adalah:
 List dari UITextField dan activeTextField
 
-```
+``` swift
 var  textFields: [ UITextField ] = []
 activeTextField: UITextField?
 ```

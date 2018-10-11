@@ -29,7 +29,7 @@ Anda bisa menggunakan File -> Add Files to ...
 Tambahkan juga file SubtitleView.swift ke project Xcode anda.
 Atau buat file Swift baru yang isinya sebagai berikut:
 
-```
+``` swift
 //
 //  SubtitleView.swift
 //  Subtitle View

@@ -7,8 +7,10 @@ thumbnail: /images/left view that too close too edge.png
 
 Bila anda memberikan view untuk LeftView atau RightView pada UITextField, anda akan lihat bahwa view tersebut terlalu mepet ke pinggir UITextField.
 
+``` swift
 	txOrgAirport.leftView = UIImageView(image: #imageLiteral(resourceName: "icon_location"))
 	txOrgAirport.leftViewMode = .always
+````
 
 ![too close](/images/left view that too close too edge.png)
 
@@ -19,22 +21,27 @@ Saya juga mencoba mengedit iconnya di GIMP dan memberikan padding manual :(. Wal
 
 Saya juga mencoba mengubah **x** pada frame view nya, seperti berikut:
 
+``` swift
 	let iconView = UIImageView(frame: CGRect(x: 8, y: 0, width: 20, height: 20))
 	iconView.image = icon_location
+````
 
 Tetap tidak berhasil.
 > Yess!
 
 Lalu saya coba membungkus ImageView di dalam View biasa. View yang diluar saya berikan width lebih lebar sesuai jumlah padding yang diinginkan. Setelah itu **x** dari ImageView itu saya buat agar sesuai jumlah paddingnya.
 
+``` swift
 	let outerView = UIView(frame: CGRect(x: 0, y: 0, width: size+padding, height: size) )
 	let iconView  = UIImageView(frame: CGRect(x: padding, y: 0, width: size, height: size))
+````
 
 ***Nah yang ini baru bisa!***
 
 Supaya lebih mudah digunakan, mari kita taro dalam **extension**.
 > Demen banget saya sama fitur extension di Swift ini :-)
 
+``` swift
 	extension UITextField {
 
 	 /// set icon of 20x20 with left padding of 8px
@@ -52,12 +59,15 @@ Supaya lebih mudah digunakan, mari kita taro dalam **extension**.
 			leftViewMode = .always  
 		}
 	}
+```
 
 
 # Cara pake
 anggap aja saya punya outlet namanya txOrigin ya, tipenya UITextField
 
+``` swift
 	txOrigin.setLeftIcon(icon_location)
+````
 
 # Khasiat
 ![left view with padding](https://i.stack.imgur.com/3mAqr.png)

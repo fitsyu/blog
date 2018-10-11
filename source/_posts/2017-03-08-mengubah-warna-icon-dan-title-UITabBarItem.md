@@ -20,14 +20,14 @@ Yaitu ketika tab tidak dipilih
 
 Marilah kita mulai dengan membuat TabBarController baru yang diturunkan dari UITabBarController bawaan Cocoa.
 
-```
+``` swift
 class MyCustomTabBarController: UITabBarController
 ```
 
 
 ## Override fungsi viewWillAppear
 
-```
+``` swift
 override func viewWillAppear()
 ```
 
@@ -47,7 +47,7 @@ Karena di Swift 3 dan Xcode 8 ( yang sedang dipakai saat post ini ditulis ) sete
 
 Membuat icon menjadi apa adanya tidak menggunakan template saat dipilih.
 
-```
+``` swift
 item.selectedImage  = item.selectedImage?.withRenderingMode(.alwaysOriginal)
 ```
 
@@ -57,7 +57,7 @@ item.selectedImage  = item.selectedImage?.withRenderingMode(.alwaysOriginal)
 
 Membuat icon menjadi apa adanya tidak menggunakan template saat tidak dipilih.
 
-```
+``` swift
 item.image  = item.image?.withRenderingMode(.alwaysOriginal)
 ```
 
@@ -66,7 +66,7 @@ item.image  = item.image?.withRenderingMode(.alwaysOriginal)
 
 Membuat agar warna title menjadi putih saat dipilih
 
-```
+``` swift
 item.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.white ], for: .selected)
  ```
 
@@ -74,7 +74,7 @@ item.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.white ], fo
 
 Membuat agar warna title menjadi merah saat tidak dipilih.
 
-```
+``` swift
 item.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.red ], for: .normal)
 ```
 
@@ -83,7 +83,7 @@ item.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.red ], for:
 
 ## Seluruhnya
 
-```
+``` swift
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

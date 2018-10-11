@@ -10,7 +10,7 @@ Ada banyak cara menggunakan Timer pada Swift.
 Contoh simple nya :
 
 
-```
+``` swift
 
 Timer.scheduledTimer( withTimeInterval: 1.0, repeats: false,  block: { _ in
 

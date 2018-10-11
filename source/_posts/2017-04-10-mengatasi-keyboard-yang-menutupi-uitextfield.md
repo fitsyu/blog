@@ -22,7 +22,7 @@ Untungnya ada cara untuk mengetahui kapan keyboard muncul dan kapan keyboard kem
 
 ## Dan inilah cara menggunakannya:
 
-```
+``` swift
 override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,7 +34,7 @@ override func viewDidLoad() {
 
 Bila textfield berada di dalam UIScrollView:
 
-```
+``` swift
 @IBOutlet weak var scrollView: UIScrollView!
 
 override func viewDidLoad() {

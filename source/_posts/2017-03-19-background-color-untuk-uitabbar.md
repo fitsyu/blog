@@ -33,6 +33,7 @@ Oke. Kalau begitu kita tinggal _resize_ gambarnya saja. Mudah. Tapi berapa _size
 
 Subclass UITabBarControllernya dan pada _viewDidLoad()_ kita masukkan kode berikut:
 
+``` swift
 	class BgColoredTabBarController: UITabBarController {
 			override func viewDidLoad() {
 					super.viewDidLoad()
@@ -45,6 +46,7 @@ Subclass UITabBarControllernya dan pada _viewDidLoad()_ kita masukkan kode berik
 
 			}
 	}
+```
 
 
 Set custom class di storyboard dengan class yang baru dibuat. Lalu **CMD+R**.
@@ -72,6 +74,9 @@ Kita kan _coder_ kenapa gak buat saja _code_ nya.
 Yaitu beberapa baris _code_  yang dengan parameter warna saja dapat membuat sebuah objek gambar polos dengan warna yang ditentukan sesuai dengan ukuran tab yang sedang digunakan.
 
 ## Biarkan semuanya dibuat dengan _code_
+
+
+``` swift
 	extension UITabBarController {
 			func setBarSelectedTintColor(_ color: UIColor) {
 					// determine the size
@@ -89,10 +94,14 @@ Yaitu beberapa baris _code_  yang dengan parameter warna saja dapat membuat sebu
 					self.tabBar.selectionIndicatorImage = image
 			}
 	}
+```
 
 Contoh cara pakenya:
 
-        setBarSelectedTintColor( UIColor.black )
+``` swift
+    setBarSelectedTintColor( UIColor.black )
+
+```
 
 Khasiatnya:
 
