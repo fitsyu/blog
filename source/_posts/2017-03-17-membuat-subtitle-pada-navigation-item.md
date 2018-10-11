@@ -4,12 +4,12 @@ date: 2017-03-17
 tags: swift
 ---
 
-Navigation Item hanya support title saja. Tapi tahukan anda ada property bernama **titleView** yang membolehkan title tersebut dapat diganti dengan view apa saja. (asal muat).
+Navigation Item hanya support title saja. Tapi tahukan kita ada property bernama **titleView** yang membolehkan title tersebut dapat diganti dengan view apa saja. (asal muat).
 
 ![](/images/title doang.png)
 
 
-> Setelah pulang dari sini anda akan punya navigation item yang ada subtitlenya.
+> Setelah pulang dari sini kita akan punya navigation item yang ada subtitlenya.
 
 
 Ikuti langkah-langkah mudah berikut:
@@ -21,12 +21,12 @@ Ada 3 file dalam zip ini.  [Download dulu ](/files/SubtitleView.zip)
 ![](/images/subtitle view xib.png)
 
 Tambahkan file SubtitleView.xib ini ke project Xcode.
-Anda bisa menggunakan File -> Add Files to ...
+kita bisa menggunakan File -> Add Files to ...
 
 
 # Kode untuk SubtitleView
 
-Tambahkan juga file SubtitleView.swift ke project Xcode anda.
+Tambahkan juga file SubtitleView.swift ke project Xcode kita.
 Atau buat file Swift baru yang isinya sebagai berikut:
 
 ``` swift

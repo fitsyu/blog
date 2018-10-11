@@ -5,7 +5,7 @@ tags: swift
 thumbnail: /images/left view that too close too edge.png
 ---
 
-Bila anda memberikan view untuk LeftView atau RightView pada UITextField, anda akan lihat bahwa view tersebut terlalu mepet ke pinggir UITextField.
+Bila kita memberikan view untuk LeftView atau RightView pada UITextField, kita akan lihat bahwa view tersebut terlalu mepet ke pinggir UITextField.
 
 ``` swift
 	txOrgAirport.leftView = UIImageView(image: #imageLiteral(resourceName: "icon_location"))

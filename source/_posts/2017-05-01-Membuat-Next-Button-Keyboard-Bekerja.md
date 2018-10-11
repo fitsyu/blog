@@ -24,7 +24,7 @@ Selain itu maka tutup saja apapun yang sedang aktif.
 Untuk jumlah textfield yang sedikit ( < 4 ) dan sekitarnya, tentu masih mudah untuk diterapkan. Tapi bagaimana bila seluruh View berisi lebih dari 10 UITextField. Waaaw.
 
 ## Cara Dinamic
-Cara ini memang akan lebih merepotkan namun percayalah tiada yang sia-sia. Hasil dari repot itu ialah anda tidak perlu lagi menentukan secara _manual_ textfield mana dibuka setelah textfield yang mana.
+Cara ini memang akan lebih merepotkan namun percayalah tiada yang sia-sia. Hasil dari repot itu ialah kita tidak perlu lagi menentukan secara _manual_ textfield mana dibuka setelah textfield yang mana.
 
 Pertama yang dibutuhkan adalah dua buah property pada objek yang berperan sebagai UITextFieldDelegate yang kemungkinan besar adalah ViewController yang terpasang outlet UITextField di dalamnya.
 Dua property tersebut adalah:

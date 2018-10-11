@@ -7,7 +7,7 @@ tags: swift
 # Revelation
 Tidak seperti Android,  keyboard (soft) di iOS akan menutupi apapun yang ada di bawahnya dan tidak ada penganganan otomatis dari sistem operasi.
 
-Suatu bonus extra dari Apple agar anda semakin rajin menulis kode. Tapi ini adalah masalah yang umum dan dapat dipastikan siapapun pasti merasakan kagetnya pas keyboard muncul,  UITextField atau apapun di bawah keyboard jadi tidak kelihatan.
+Suatu bonus extra dari Apple agar kita semakin rajin menulis kode. Tapi ini adalah masalah yang umum dan dapat dipastikan siapapun pasti merasakan kagetnya pas keyboard muncul,  UITextField atau apapun di bawah keyboard jadi tidak kelihatan.
 
 # Reconciliation
 

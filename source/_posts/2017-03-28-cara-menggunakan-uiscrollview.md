@@ -5,8 +5,8 @@ tags: swift
 thumbnail: "/images/UIScrollView 1.png"
 ---
 
-UIScrollView kalo anda nggak tau cara pakenya bakalan susah.
-Intinya anda harus inget beberapa hal ini tiap kali mau ngedrag UIScrollView ke UIViewController anda.
+UIScrollView kalo kita nggak tau cara pakenya bakalan susah.
+Intinya kita harus inget beberapa hal ini tiap kali mau ngedrag UIScrollView ke UIViewController kita.
 
 Inget:
 
@@ -43,7 +43,7 @@ Ukuran content view tidak boleh bergantung ke ScrollView. Pada contoh ini ukuran
 
 ![Step 1](/images/UIScrollView 5.png)
 
-Dapat dilihat yang merah-merah (tanda constraint masih ada yang salah) sudah hilang. Kini UIScrollView dengan ContentView siap digunakan.
+Dapat dilihat yang merah-merah (tkita constraint masih ada yang salah) sudah hilang. Kini UIScrollView dengan ContentView siap digunakan.
 # Demikian
 Mudah-mudahan berguna. Thanks!
 
