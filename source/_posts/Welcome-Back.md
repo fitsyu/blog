@@ -4,8 +4,6 @@ date: 2018-10-10 14:35:58
 tags: general
 ---
 
-![Test](/images/download-button.png)
-
 Let's count our failures up to times before this blog.
 There were:
 
