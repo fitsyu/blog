@@ -5,7 +5,7 @@ tags:
 ---
 
 
-Let's count our failures up to before this blog.
+Let's count our failures up to times before this blog.
 There were:
 
 - Wordpress
@@ -14,15 +14,25 @@ There were:
 - Blogspot (Again)
 - Jekyll
 
+Nothing wrong with them. They are good blogging platform.
+
+The only one to blame is We.
+
+Everytime we want to write a post. We had to start over from almost the very start.
+
+Learning everything needed to just publish one post.
+Thats how we fall and fail everytime.
+
 \* Now we are going to use `Hexo!`
 
-We choose `Cactus\light` theme.
+We choose `Cactus\light2` theme.
 
 It looks simple but very nice.
 
 We hope we feel at home with them.
 
-Now, to help us starting-over writing again if anytime in the future somehow we've stopped blogging for whatever reason.
+Now, to help us starting-over writing again if anytime in the future somehow we've stopped blogging for whatever reason, let's prepare a quick note
+stating exactly steps on how to get our feet wet once more time in this kind of mind-dumping world.
 
 So let's follow these easy steps below!
 
@@ -85,6 +95,12 @@ snapshot the changes
 
 `git commit -m "write new post"`
 
+### Preview
+to see the just-finised post we can do it with
+
+`hexo server`
+
+to launch local server serving the blog locally
 
 
 ## 3. Publish
