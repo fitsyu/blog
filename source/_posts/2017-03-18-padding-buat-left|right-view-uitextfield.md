@@ -75,3 +75,5 @@ semoga berguna ya. Thanks!
 > ***Bye!***
 
 ![bye](/images/bye.gif)
+
+{% asset_img bye.gif "bye" %}

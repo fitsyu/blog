@@ -18,7 +18,7 @@ Klik navigation bar lalu pada tab **attribute inspector** field **title** masukk
 
 Hasilnya...
 
-![no title](/images/Back%20Button%20With%20No%20Title.png)
+![no title](/images/Back Button With No Title.png)
 
 Demikian!
 Semoga berguna!
