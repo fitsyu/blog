@@ -119,7 +119,7 @@ we can publish it this way
 
 open the site in a browser
 
-hopefully it has sit there nicely along others previous posts.
+hopefully it has sit there nicely along with others previous posts.
 
 Thats it!.
 
