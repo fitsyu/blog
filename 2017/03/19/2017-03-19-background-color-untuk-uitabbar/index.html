@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Ceritanya ingin memberikan warna background pas tabnya  di select. Namun sayangnya tidak ada property yang bernama selection background tint yang bisa diset di storyboard ataupun di code. Yang ada mal">
+<meta name="keywords" content="swift">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Background Color Untuk UITabBar">
+<meta property="og:url" content="http://fitsyu.github.io/blog/2017/03/19/2017-03-19-background-color-untuk-uitabbar/index.html">
+<meta property="og:site_name" content="Blog">
+<meta property="og:description" content="Ceritanya ingin memberikan warna background pas tabnya  di select. Namun sayangnya tidak ada property yang bernama selection background tint yang bisa diset di storyboard ataupun di code. Yang ada mal">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://fitsyu.github.io/images/bg%20tinted%20tabbar.png">
+<meta property="og:updated_time" content="2019-09-05T16:07:40.287Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Background Color Untuk UITabBar">
+<meta name="twitter:description" content="Ceritanya ingin memberikan warna background pas tabnya  di select. Namun sayangnya tidak ada property yang bernama selection background tint yang bisa diset di storyboard ataupun di code. Yang ada mal">
+<meta name="twitter:image" content="http://fitsyu.github.io/images/bg%20tinted%20tabbar.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Background Color Untuk UITabBar</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2017/03/28/2017-03-28-cara-menggunakan-uiscrollview/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2017/03/18/2017-03-18-padding-buat-left|right-view-uitextfield/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://fitsyu.github.io/blog/2017/03/19/2017-03-19-background-color-untuk-uitabbar/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://fitsyu.github.io/blog/2017/03/19/2017-03-19-background-color-untuk-uitabbar/&text=Background Color Untuk UITabBar"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://fitsyu.github.io/blog/2017/03/19/2017-03-19-background-color-untuk-uitabbar/&title=Background Color Untuk UITabBar"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://fitsyu.github.io/blog/2017/03/19/2017-03-19-background-color-untuk-uitabbar/&is_video=false&description=Background Color Untuk UITabBar"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Background Color Untuk UITabBar&body=Check out this article: http://fitsyu.github.io/blog/2017/03/19/2017-03-19-background-color-untuk-uitabbar/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://fitsyu.github.io/blog/2017/03/19/2017-03-19-background-color-untuk-uitabbar/&title=Background Color Untuk UITabBar"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://fitsyu.github.io/blog/2017/03/19/2017-03-19-background-color-untuk-uitabbar/&title=Background Color Untuk UITabBar"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://fitsyu.github.io/blog/2017/03/19/2017-03-19-background-color-untuk-uitabbar/&title=Background Color Untuk UITabBar"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://fitsyu.github.io/blog/2017/03/19/2017-03-19-background-color-untuk-uitabbar/&title=Background Color Untuk UITabBar"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://fitsyu.github.io/blog/2017/03/19/2017-03-19-background-color-untuk-uitabbar/&name=Background Color Untuk UITabBar&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Apa-yang-bisa-dilakukan"><span class="toc-number">1.</span> <span class="toc-text">Apa yang bisa dilakukan ?</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Memasang-gambar-polos-sebagai-background"><span class="toc-number">1.1.</span> <span class="toc-text">Memasang gambar polos sebagai background.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Memasang-gambar-polos-dengan-ukuran-fix"><span class="toc-number">1.2.</span> <span class="toc-text">Memasang gambar polos dengan ukuran fix</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Biarkan-semuanya-dibuat-dengan-code"><span class="toc-number">1.3.</span> <span class="toc-text">Biarkan semuanya dibuat dengan code</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Background Color Untuk UITabBar
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Blog</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2017-03-18T17:00:00.000Z" itemprop="datePublished">2017-03-19</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/swift/">swift</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>Ceritanya ingin memberikan warna background pas tabnya  di <em>select</em>. Namun sayangnya tidak ada property yang bernama <em>selection background tint</em> yang bisa diset di storyboard ataupun di code. Yang ada malah property <em>selection indicator image</em>.</p>
+<p>Lalu…</p>
+<h1 id="Apa-yang-bisa-dilakukan"><a href="#Apa-yang-bisa-dilakukan" class="headerlink" title="Apa yang bisa dilakukan ?"></a>Apa yang bisa dilakukan ?</h1><h2 id="Memasang-gambar-polos-sebagai-background"><a href="#Memasang-gambar-polos-sebagai-background" class="headerlink" title="Memasang gambar polos sebagai background."></a>Memasang gambar polos sebagai background.</h2><p>![](/images/tab selected bg color.png)</p>
+<p>Karena yang ada property <em>selection indicator image</em>, jadi apa boleh buat.<br>Berikut hasil dari Tab Bar yang diberikan <em>selection indicator image</em>:</p>
+<p>![](/images/bg color image too big.png)</p>
+<blockquote>
+<p>Gawat! Gambarnya terlalu besar!</p>
+</blockquote>
+<h2 id="Memasang-gambar-polos-dengan-ukuran-fix"><a href="#Memasang-gambar-polos-dengan-ukuran-fix" class="headerlink" title="Memasang gambar polos dengan ukuran fix"></a>Memasang gambar polos dengan ukuran fix</h2><p>Seperti yang sudah dilihat dengan memberikan <em>selection indicator image</em>. gambar nya ternyata tidak di _resize_secara internal  agar sesuai dengan ukuran tab  bar nya. :(</p>
+<p>Dengan kata lain, gambarnya harus sudah fix <em>size</em> nya.</p>
+<p>Oke. Kalau begitu kita tinggal <em>resize</em> gambarnya saja. Mudah. Tapi berapa <em>size</em> nya??</p>
+<blockquote>
+<p>Good Question</p>
+</blockquote>
+<p>Subclass UITabBarControllernya dan pada <em>viewDidLoad()</em> kita masukkan kode berikut:</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BgColoredTabBarController</span>: <span class="title">UITabBarController</span> </span>&#123;</span><br><span class="line">		<span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">viewDidLoad</span><span class="params">()</span></span> &#123;</span><br><span class="line">				<span class="keyword">super</span>.viewDidLoad()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">				<span class="keyword">let</span> width  = tabBar.frame.width / <span class="number">4</span></span><br><span class="line">				<span class="keyword">let</span> height = tabBar.frame.height</span><br><span class="line"></span><br><span class="line">				<span class="built_in">print</span>(<span class="string">"\(width)x\(height)"</span>)</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Set custom class di storyboard dengan class yang baru dibuat. Lalu <strong>CMD+R</strong>.</p>
+<p>Dapet! dan berikut outputnya:<br><strong>103.5x49.0</strong> (<em>Menggunakan Simulator iPhone 7s</em>)</p>
+<p>Dari informasi tersebut, kita <em>resize</em> gambar yang tadi digunakan sebagai <em>selection indicator image</em>. Kemudian mengganti property <em>selection indicator image</em> yang lama dengan yang sudah diresize ini.<br><strong>CMD+R</strong> dan hasilnya:</p>
+<p>![](/images/work with fixed size img.png)</p>
+<p>Yeah!  berhasil juga.</p>
+<p>Tapi,</p>
+<ul>
+<li>Bagaimana kalo jumlah tab nya berubah ?</li>
+<li>Bagaimana kalo harus mengganti warna ?</li>
+<li>Bagaimana ukurannya kalo di iPhone yang lain?</li>
+</ul>
+<p>Pada akhirnya akan ada ketergantungan yang besar dengan image editor eksternal dan itu dapat memperlambat proses <em>development</em>.</p>
+<p>Kita kan <em>coder</em> kenapa gak buat saja <em>code</em> nya.</p>
+<p>Yaitu beberapa baris <em>code</em>  yang dengan parameter warna saja dapat membuat sebuah objek gambar polos dengan warna yang ditentukan sesuai dengan ukuran tab yang sedang digunakan.</p>
+<h2 id="Biarkan-semuanya-dibuat-dengan-code"><a href="#Biarkan-semuanya-dibuat-dengan-code" class="headerlink" title="Biarkan semuanya dibuat dengan code"></a>Biarkan semuanya dibuat dengan <em>code</em></h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">extension</span> <span class="title">UITabBarController</span> </span>&#123;</span><br><span class="line">		<span class="function"><span class="keyword">func</span> <span class="title">setBarSelectedTintColor</span><span class="params">(<span class="number">_</span> color: UIColor)</span></span> &#123;</span><br><span class="line">				<span class="comment">// determine the size</span></span><br><span class="line">				<span class="keyword">let</span> w = <span class="keyword">self</span>.tabBar.frame.width / <span class="type">CGFloat</span>(<span class="keyword">self</span>.tabBar.items!.<span class="built_in">count</span>)</span><br><span class="line">				<span class="keyword">let</span> h = <span class="keyword">self</span>.tabBar.frame.height</span><br><span class="line">				<span class="keyword">let</span> size = <span class="type">CGSize</span>(width: w, height: h)</span><br><span class="line"></span><br><span class="line">				<span class="comment">// make image</span></span><br><span class="line">				<span class="type">UIGraphicsBeginImageContextWithOptions</span>(size, <span class="literal">false</span>, <span class="number">0</span>)</span><br><span class="line">				color.setFill()</span><br><span class="line">				<span class="type">UIRectFill</span>(<span class="type">CGRect</span>(x:<span class="number">0</span>, y:<span class="number">0</span>, width:size.width, height:size.height))</span><br><span class="line">				<span class="keyword">let</span> image = <span class="type">UIGraphicsGetImageFromCurrentImageContext</span>()</span><br><span class="line">				<span class="type">UIGraphicsEndImageContext</span>()</span><br><span class="line"></span><br><span class="line">				<span class="keyword">self</span>.tabBar.selectionIndicatorImage = image</span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Contoh cara pakenya:</p>
+<pre><code class="swift">    setBarSelectedTintColor( <span class="type">UIColor</span>.black )
+
+```
+
+<span class="type">Khasiatnya</span>:
+
+![](/images/bg tinted tabbar.png)
+# <span class="type">Demikian</span>
+
+<span class="type">Mudah</span>-mudahan berguna. <span class="type">Thanks!</span>
+
+&gt; ***<span class="type">Bye!</span>***
+
+![bye](/images/bye.gif)</code></pre>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Apa-yang-bisa-dilakukan"><span class="toc-number">1.</span> <span class="toc-text">Apa yang bisa dilakukan ?</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Memasang-gambar-polos-sebagai-background"><span class="toc-number">1.1.</span> <span class="toc-text">Memasang gambar polos sebagai background.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Memasang-gambar-polos-dengan-ukuran-fix"><span class="toc-number">1.2.</span> <span class="toc-text">Memasang gambar polos dengan ukuran fix</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Biarkan-semuanya-dibuat-dengan-code"><span class="toc-number">1.3.</span> <span class="toc-text">Biarkan semuanya dibuat dengan code</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://fitsyu.github.io/blog/2017/03/19/2017-03-19-background-color-untuk-uitabbar/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://fitsyu.github.io/blog/2017/03/19/2017-03-19-background-color-untuk-uitabbar/&text=Background Color Untuk UITabBar"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://fitsyu.github.io/blog/2017/03/19/2017-03-19-background-color-untuk-uitabbar/&title=Background Color Untuk UITabBar"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://fitsyu.github.io/blog/2017/03/19/2017-03-19-background-color-untuk-uitabbar/&is_video=false&description=Background Color Untuk UITabBar"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Background Color Untuk UITabBar&body=Check out this article: http://fitsyu.github.io/blog/2017/03/19/2017-03-19-background-color-untuk-uitabbar/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://fitsyu.github.io/blog/2017/03/19/2017-03-19-background-color-untuk-uitabbar/&title=Background Color Untuk UITabBar"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://fitsyu.github.io/blog/2017/03/19/2017-03-19-background-color-untuk-uitabbar/&title=Background Color Untuk UITabBar"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://fitsyu.github.io/blog/2017/03/19/2017-03-19-background-color-untuk-uitabbar/&title=Background Color Untuk UITabBar"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://fitsyu.github.io/blog/2017/03/19/2017-03-19-background-color-untuk-uitabbar/&title=Background Color Untuk UITabBar"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://fitsyu.github.io/blog/2017/03/19/2017-03-19-background-color-untuk-uitabbar/&name=Background Color Untuk UITabBar&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 Fitsyu
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<!-- clipboard -->
+
+  <script src="/lib/clipboard/clipboard.min.js"></script>
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight .code pre").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      target: function(trigger) {
+        return trigger.nextElementSibling;
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
